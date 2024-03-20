@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VideoFileRenamer.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VideoFileRenamer"
+    Title="VideoFileRenamer"
+    Shell.FlyoutBehavior="Flyout">
+
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+
+
+    <Shell.FlyoutHeader>
+
+
+
+
+        <VerticalStackLayout>
+
+            <Button
+                x:Name="directory_file_picker"
+                Command="{Binding Handle_directory_selected_Command}"
+                Text="Select directory" />
+
+            <Button
+                x:Name="csv_file_picker"
+                Command="{Binding Handle_csv_selected_Command}"
+                Text="Select csv file for valid names" />
+
+
+
+        </VerticalStackLayout>
+
+
+
+
+    </Shell.FlyoutHeader>
+
+
+</Shell>

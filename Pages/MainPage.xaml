@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VideoFileRenamer.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VideoFileRenamer">
+
+    <Grid
+        BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground},
+                                          Dark={StaticResource DarkBackground}}"
+        ColumnDefinitions="2550, *"
+        ColumnSpacing="5"
+        RowDefinitions="*, Auto"
+        RowSpacing="0">
+        <CollectionView ItemsSource="{Binding VideoCollection}" SelectionMode="None">
+            <CollectionView.EmptyView>
+                <StackLayout Padding="100">
+                    <Image
+                        HeightRequest="160"
+                        HorizontalOptions="Center"
+                        Source="nodata.png"
+                        VerticalOptions="Center"
+                        WidthRequest="160" />
+                </StackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="local:VideoFile">
+                    <Grid Padding="10" HorizontalOptions="FillAndExpand">
+                        <Frame HeightRequest="500" Style="{StaticResource CardView}">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer />
+                            </Frame.GestureRecognizers>
+                            <Grid Padding="0" ColumnDefinitions="125, *">
+                                <VerticalStackLayout
+                                    Grid.Column="1"
+                                    Padding="10"
+                                    VerticalOptions="StartAndExpand">
+
+                                    <Label Style="{StaticResource LargeLabel}" Text="{Binding VideoName}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Go_to_DetailPage" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                    <Label Style="{StaticResource MediumLabel}" Text="{Binding VideoPath}" />
+
+
+                                    <FlexLayout
+                                        Grid.Column="0"
+                                        BindableLayout.ItemsSource="{Binding Paths_to_screenshots}"
+                                        Direction="Row"
+                                        JustifyContent="SpaceEvenly"
+                                        Wrap="NoWrap">
+
+                                        <BindableLayout.ItemTemplate>
+                                            <DataTemplate>
+                                                <Frame BackgroundColor="White">
+                                                    <Image
+                                                        Aspect="AspectFit"
+                                                        HeightRequest="360"
+                                                        Opacity="1"
+                                                        Source="{Binding .}"
+                                                        WidthRequest="640" />
+                                                </Frame>
+                                            </DataTemplate>
+                                        </BindableLayout.ItemTemplate>
+                                    </FlexLayout>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout
+                                    Grid.Column="0"
+                                    Padding="10"
+                                    VerticalOptions="StartAndExpand">
+                                    <Label Text="{Binding mediaAnalysis.Duration, Converter={StaticResource TimeSpanConverter}}" VerticalOptions="CenterAndExpand" />
+
+                                    <Label>
+                                        <Label.Text>
+                                            <MultiBinding Converter="{StaticResource VideoResolutionConverter}">
+                                                <Binding Path="mediaAnalysis.VideoStreams[0].Width" />
+                                                <Binding Path="mediaAnalysis.VideoStreams[0].Height" />
+                                            </MultiBinding>
+                                        </Label.Text>
+                                    </Label>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+
+
+
+
+        </CollectionView>
+
+        <ActivityIndicator
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Fill"
+            IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            VerticalOptions="Center"
+            Color="{StaticResource Primary}" />
+    </Grid>
+</ContentPage>

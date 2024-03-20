@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="VideoFileRenamer.DetailsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:VideoFileRenamer"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui">
+
+
+    <Grid RowDefinitions="Auto,Auto">
+        <!--  Define two rows, one for the top and one for the bottom  -->
+
+
+        <!--  Content for the top part  -->
+        <VerticalStackLayout Grid.Row="0" BackgroundColor="White">
+            <!--  Add your content here  -->
+            <uranium:SelectableLabel
+                HorizontalOptions="Center"
+                Text="{Binding VideoFile.VideoName}"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                HorizontalOptions="Center"
+                Text="{Binding VideoFile.VideoPath}"
+                VerticalOptions="CenterAndExpand" />
+            <FlexLayout
+                Grid.Column="0"
+                AlignItems="Stretch"
+                Direction="Row"
+                JustifyContent="Start"
+                Wrap="Wrap">
+                <Frame
+                    BackgroundColor="Gray"
+                    FlexLayout.Order="1"
+                    HeightRequest="400"
+                    WidthRequest="400">
+                    <VerticalStackLayout>
+
+                        <uranium:StatefulContentView LongPressCommand="{Binding Triggerrenaming}">
+                            <Border
+                                BackgroundColor="{StaticResource Primary}"
+                                HeightRequest="50"
+                                Stroke="Red"
+                                StrokeShape="{RoundRectangle CornerRadius=5}">
+                                <Label Text="{Binding SelectedVideoChoice}" TextColor="Black" />
+                            </Border>
+                        </uranium:StatefulContentView>
+
+
+                        <material:TextField Title="Enter tag to filter" TextChanged="filter_csv_options" />
+                    </VerticalStackLayout>
+                </Frame>
+                <Frame FlexLayout.Order="-1">
+                    <FlexLayout
+                        Grid.Column="0"
+                        AlignItems="Start"
+                        BindableLayout.ItemsSource="{Binding VideoFile.Paths_to_screenshots}"
+                        Direction="Row"
+                        JustifyContent="Start"
+                        Wrap="Wrap">
+
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="White">
+                                    <Image
+                                        Aspect="AspectFit"
+                                        HeightRequest="360"
+                                        Opacity="1"
+                                        Source="{Binding .}"
+                                        WidthRequest="640" />
+                                </Frame>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+
+                    </FlexLayout>
+                </Frame>
+
+
+
+
+            </FlexLayout>
+        </VerticalStackLayout>
+
+
+        <!--  Content for the bottom part  -->
+        <StackLayout Grid.Row="1" BackgroundColor="LightGreen">
+
+            <ActivityIndicator
+                x:Name="ActivityComponent"
+                HeightRequest="400"
+                IsRunning="false"
+                IsVisible="False"
+                WidthRequest="400"
+                Color="DarkRed" />
+            <!--  Add your content here  -->
+            <CollectionView
+                x:Name="csv_component"
+                HeightRequest="750"
+                ItemsSource="{Binding CsvCollection}"
+                SelectionChanged="OnCollectionViewSelectionChanged"
+                SelectionMode="Single">
+
+                <CollectionView.ItemsLayout>
+
+                    <GridItemsLayout Orientation="Vertical" Span="1" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="100">
+                        <Image
+                            HeightRequest="160"
+                            HorizontalOptions="Center"
+                            Source="nodata.png"
+                            VerticalOptions="Center"
+                            WidthRequest="160" />
+
+                    </StackLayout>
+
+                </CollectionView.EmptyView>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="local:CSV_entry">
+                        <Grid Padding="2" HorizontalOptions="FillAndExpand">
+                            <Frame HeightRequest="60" Style="{StaticResource CardView}">
+
+                                <Grid Padding="0" ColumnDefinitions="145, auto, auto,*">
+                                    <VerticalStackLayout
+                                        Grid.Column="1"
+                                        Padding="10"
+                                        VerticalOptions="Start">
+
+
+                                        <Label Style="{StaticResource LargeLabel}" Text="{Binding Title}">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer NumberOfTapsRequired="2" Tapped="Go_to_link" />
+                                            </Label.GestureRecognizers>
+                                        </Label>
+
+
+                                        <Label Style="{StaticResource MediumLabel}" Text="{Binding Actors}" />
+
+
+
+                                    </VerticalStackLayout>
+                                    <VerticalStackLayout
+                                        Grid.Column="2"
+                                        Padding="10"
+                                        VerticalOptions="Start">
+                                        <Label Style="{StaticResource LargeLabel}" Text="{Binding Date, Converter={StaticResource DatetimeConverter}}" />
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout
+                                        Grid.Column="3"
+                                        Padding="10"
+                                        VerticalOptions="Start">
+                                        <Label Style="{StaticResource LargeLabel}" Text="{Binding scene_code, Converter={StaticResource SceneCodeConverter}}" />
+                                    </VerticalStackLayout>
+
+
+                                </Grid>
+                            </Frame>
+
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+
+
+
+
+            </CollectionView>
+        </StackLayout>
+    </Grid>
+</ContentPage>
