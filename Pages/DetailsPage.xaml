@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:VideoFileRenamer"
     xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
-    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui">
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    x:DataType="local:VideoFile">
 
 
     <Grid RowDefinitions="Auto,Auto">
@@ -13,15 +14,16 @@
 
 
         <!--  Content for the top part  -->
-        <VerticalStackLayout Grid.Row="0" BackgroundColor="White">
+        <VerticalStackLayout Grid.Row="0" BackgroundColor="White"
+                             x:DataType="{x:Null}">
             <!--  Add your content here  -->
             <uranium:SelectableLabel
                 HorizontalOptions="Center"
-                Text="{Binding VideoFile.VideoName}"
+                                     Text="{Binding VideoFile.VideoName}"
                 VerticalOptions="CenterAndExpand" />
             <Label
                 HorizontalOptions="Center"
-                Text="{Binding VideoFile.VideoPath}"
+                   Text="{Binding VideoFile.VideoPath}"
                 VerticalOptions="CenterAndExpand" />
             <FlexLayout
                 Grid.Column="0"
@@ -34,7 +36,7 @@
                     FlexLayout.Order="1"
                     HeightRequest="400"
                     WidthRequest="400">
-                    <VerticalStackLayout>
+                    <VerticalStackLayout x:DataType="local:DetailsPage">
 
                         <uranium:StatefulContentView LongPressCommand="{Binding Triggerrenaming}">
                             <Border
@@ -48,11 +50,15 @@
 
 
                         <material:TextField Title="Enter tag to filter" TextChanged="filter_csv_options" />
+
+                        <Button Clicked="DeleteVideo" Text="Delete Video" />
+
                     </VerticalStackLayout>
                 </Frame>
                 <Frame FlexLayout.Order="-1">
                     <FlexLayout
                         Grid.Column="0"
+                        x:DataType="{x:Null}"
                         AlignItems="Start"
                         BindableLayout.ItemsSource="{Binding VideoFile.Paths_to_screenshots}"
                         Direction="Row"
@@ -95,6 +101,7 @@
             <!--  Add your content here  -->
             <CollectionView
                 x:Name="csv_component"
+                x:DataType="local:MainpageViewModel"
                 HeightRequest="750"
                 ItemsSource="{Binding CsvCollection}"
                 SelectionChanged="OnCollectionViewSelectionChanged"

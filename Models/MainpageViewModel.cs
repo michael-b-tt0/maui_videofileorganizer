@@ -89,6 +89,7 @@ public class MainpageViewModel : BindableObject
             Debug.WriteLine($"selected {result.Folder.Name} path is {result.Folder.Path}");
             VideoFolder.Directory_name = result.Folder.Name;
             VideoFolder.Directory_Full_Path = result.Folder.Path;
+            VideoFile.Checkscreenshotfolder();
             VideoFolder.Load_filepaths();
             foreach (var i in VideoFolder.Directory_filelist)
             {
@@ -101,7 +102,7 @@ public class MainpageViewModel : BindableObject
 
                         VideoPath = i
                     };
-
+                    //why are images appearing in detail but not mainpage on release version!??/
                     video1.getVideoImages();
                     VideoCollection.Add(video1);
                 }

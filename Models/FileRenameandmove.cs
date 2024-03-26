@@ -47,4 +47,40 @@ public static class FileRenameandmove
        
 
     }
+    public static async Task<(string Result, bool HasBeendeleted)> DeleteAsync(string filepath,  IProgress<int> progress = null)
+    {
+        
+        try
+        {
+
+            
+            if (File.Exists(filepath))
+            {
+
+                await Task.Run(() =>
+                {
+                 progress?.Report(1);
+                File.Delete(filepath);
+                progress?.Report(2);
+
+
+                });
+
+
+                return ($"Success: File {filepath} has been moved to deleted.", true);
+            }
+            else
+            {
+                return ($"Error: File {filepath} cannot be found at that path check manually.", false);
+            }
+
+        }
+        catch (IOException ex)
+        {
+
+            return ($"Error deleting file {filepath}: {ex.Message}", false);
+        }
+
+    }
+
 }

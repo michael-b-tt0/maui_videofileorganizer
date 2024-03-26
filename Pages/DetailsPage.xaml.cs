@@ -27,6 +27,8 @@ public partial class DetailsPage : ContentPage
 
     private string selectedVideoChoice = string.Empty;
 
+    
+
     public string SelectedVideoChoice
     {
 
@@ -95,19 +97,21 @@ public partial class DetailsPage : ContentPage
 
                 // Call your function here
                 var (output, hasMoved) = await FileRenameandmove.RenameAsync(videoFile.VideoPath, SelectedVideoChoice, progressReporter);
-                if (hasMoved)
+            if (hasMoved)
+            {
+                //remove the current video file from the collection and go back to the mainpage
+                var done = mainpageViewModel.VideoCollection.Remove(VideoFile);
+                if (done)
                 {
-                    //remove the current video file from the collection and go back to the mainpage
-                    var done = mainpageViewModel.VideoCollection.Remove(VideoFile);
-                    if (done)
-                    {
-                        Debug.WriteLine("video removed!");
-                    }
-                    
-                    await Shell.Current.GoToAsync("..");
-
+                    Debug.WriteLine("video removed!");
                 }
+
+                await Shell.Current.GoToAsync("..");
+
+            }
+            
                 await DisplayAlert("Output", output, "OK");
+            
 
             
         }
@@ -116,6 +120,53 @@ public partial class DetailsPage : ContentPage
 
 
 
+
+    }
+
+    public async void DeleteVideo(object sender, EventArgs args)
+    {
+        bool result = await DisplayAlert("Deleting", $"Really delete file {videoFile.VideoPath} ?", "OK", "Cancel");
+
+        if (result)
+        {
+            var progressReporter = new Progress<int>(progress =>
+            {
+                if (progress == 1)
+                {
+                    csv_component.IsVisible = false;
+                    ActivityComponent.IsRunning = true;
+                    ActivityComponent.IsVisible = true;
+
+
+
+                }
+
+                else if (progress == 2)
+                {
+                    ActivityComponent.IsRunning = false;
+                    ActivityComponent.IsVisible = false;
+                    csv_component.IsVisible = true;
+                    DisplayAlert("Title", "Delete Finished!", "OK");
+                }
+            });
+
+            var (output, hasDeleted) = await FileRenameandmove.DeleteAsync(videoFile.VideoPath, progressReporter);
+            if (hasDeleted)
+            {
+                //remove the current video file from the collection and go back to the mainpage
+                var done = mainpageViewModel.VideoCollection.Remove(VideoFile);
+                if (done)
+                {
+                    Debug.WriteLine("video removed!");
+                }
+
+                await Shell.Current.GoToAsync("..");
+
+            }
+
+            await DisplayAlert("Output", output, "OK");
+
+        }
 
     }
 

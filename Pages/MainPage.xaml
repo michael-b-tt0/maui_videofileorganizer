@@ -3,7 +3,8 @@
     x:Class="VideoFileRenamer.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:VideoFileRenamer">
+    xmlns:local="clr-namespace:VideoFileRenamer"
+    x:DataType="local:MainpageViewModel">
 
     <Grid
         BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground},
@@ -25,7 +26,7 @@
             </CollectionView.EmptyView>
 
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="local:VideoFile">
+                <DataTemplate>
                     <Grid Padding="10" HorizontalOptions="FillAndExpand">
                         <Frame HeightRequest="500" Style="{StaticResource CardView}">
                             <Frame.GestureRecognizers>
@@ -35,6 +36,7 @@
                                 <VerticalStackLayout
                                     Grid.Column="1"
                                     Padding="10"
+                                    x:DataType="local:VideoFile"
                                     VerticalOptions="StartAndExpand">
 
                                     <Label Style="{StaticResource LargeLabel}" Text="{Binding VideoName}">
@@ -45,8 +47,10 @@
                                     <Label Style="{StaticResource MediumLabel}" Text="{Binding VideoPath}" />
 
 
+
                                     <FlexLayout
                                         Grid.Column="0"
+                                        x:DataType="{x:Null}"
                                         BindableLayout.ItemsSource="{Binding Paths_to_screenshots}"
                                         Direction="Row"
                                         JustifyContent="SpaceEvenly"
@@ -69,6 +73,7 @@
                                 <VerticalStackLayout
                                     Grid.Column="0"
                                     Padding="10"
+                                    x:DataType="local:VideoFile"
                                     VerticalOptions="StartAndExpand">
                                     <Label Text="{Binding mediaAnalysis.Duration, Converter={StaticResource TimeSpanConverter}}" VerticalOptions="CenterAndExpand" />
 
@@ -95,13 +100,6 @@
 
         </CollectionView>
 
-        <ActivityIndicator
-            Grid.RowSpan="2"
-            Grid.ColumnSpan="2"
-            HorizontalOptions="Fill"
-            IsRunning="{Binding IsBusy}"
-            IsVisible="{Binding IsBusy}"
-            VerticalOptions="Center"
-            Color="{StaticResource Primary}" />
+
     </Grid>
 </ContentPage>

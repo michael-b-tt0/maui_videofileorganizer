@@ -29,25 +29,25 @@
     <AppXManifest Include="Z:\c#\maui\VideoFileRenamer\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-03-20T18:18:13.585</Modified>
+      <Modified>2024-03-22T17:24:33.830</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-03-20T18:10:39.993</Modified>
+      <Modified>2024-03-22T17:23:16.844</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\VideoFileRenamer.runtimeconfig.json">
       <PackagePath>VideoFileRenamer.runtimeconfig.json</PackagePath>
-      <Modified>2024-03-18T14:59:45.863</Modified>
+      <Modified>2024-03-22T17:06:36.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\VideoFileRenamer.dll">
       <PackagePath>VideoFileRenamer.dll</PackagePath>
-      <Modified>2024-03-20T18:18:13.252</Modified>
+      <Modified>2024-03-22T17:24:33.497</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>VideoFileRenamer.exe</PackagePath>
-      <Modified>2024-03-20T18:18:13.255</Modified>
+      <Modified>2024-03-22T17:24:33.502</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -55,23 +55,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:36.596</Modified>
+      <Modified>2024-03-20T19:53:02.754</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:36.608</Modified>
+      <Modified>2024-03-20T19:53:02.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:36.624</Modified>
+      <Modified>2024-03-20T19:53:02.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:36.648</Modified>
+      <Modified>2024-03-20T19:53:02.804</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:36.742</Modified>
+      <Modified>2024-03-20T19:53:02.899</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
@@ -83,207 +83,207 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-03-13T14:55:37.169</Modified>
+      <Modified>2024-03-20T19:53:03.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.567</Modified>
+      <Modified>2024-03-20T19:53:03.456</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.587</Modified>
+      <Modified>2024-03-20T19:53:03.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.603</Modified>
+      <Modified>2024-03-20T19:53:03.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.628</Modified>
+      <Modified>2024-03-20T19:53:03.532</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.729</Modified>
+      <Modified>2024-03-20T19:53:03.669</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.277</Modified>
+      <Modified>2024-03-20T19:53:03.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.283</Modified>
+      <Modified>2024-03-20T19:53:03.171</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.306</Modified>
+      <Modified>2024-03-20T19:53:03.193</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.288</Modified>
+      <Modified>2024-03-20T19:53:03.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.294</Modified>
+      <Modified>2024-03-20T19:53:03.181</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.244</Modified>
+      <Modified>2024-03-20T19:53:03.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.249</Modified>
+      <Modified>2024-03-20T19:53:03.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.272</Modified>
+      <Modified>2024-03-20T19:53:03.161</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.255</Modified>
+      <Modified>2024-03-20T19:53:03.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.260</Modified>
+      <Modified>2024-03-20T19:53:03.149</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.179</Modified>
+      <Modified>2024-03-20T19:53:03.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.185</Modified>
+      <Modified>2024-03-20T19:53:03.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.190</Modified>
+      <Modified>2024-03-20T19:53:03.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.197</Modified>
+      <Modified>2024-03-20T19:53:03.087</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.205</Modified>
+      <Modified>2024-03-20T19:53:03.096</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.210</Modified>
+      <Modified>2024-03-20T19:53:03.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.215</Modified>
+      <Modified>2024-03-20T19:53:03.106</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.238</Modified>
+      <Modified>2024-03-20T19:53:03.129</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.220</Modified>
+      <Modified>2024-03-20T19:53:03.111</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.226</Modified>
+      <Modified>2024-03-20T19:53:03.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.387</Modified>
+      <Modified>2024-03-20T19:53:03.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.395</Modified>
+      <Modified>2024-03-20T19:53:03.281</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.406</Modified>
+      <Modified>2024-03-20T19:53:03.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.420</Modified>
+      <Modified>2024-03-20T19:53:03.307</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.445</Modified>
+      <Modified>2024-03-20T19:53:03.334</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.345</Modified>
+      <Modified>2024-03-20T19:53:03.231</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.352</Modified>
+      <Modified>2024-03-20T19:53:03.237</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.358</Modified>
+      <Modified>2024-03-20T19:53:03.243</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.365</Modified>
+      <Modified>2024-03-20T19:53:03.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.379</Modified>
+      <Modified>2024-03-20T19:53:03.264</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.312</Modified>
+      <Modified>2024-03-20T19:53:03.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.317</Modified>
+      <Modified>2024-03-20T19:53:03.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.323</Modified>
+      <Modified>2024-03-20T19:53:03.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.330</Modified>
+      <Modified>2024-03-20T19:53:03.216</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.339</Modified>
+      <Modified>2024-03-20T19:53:03.225</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.454</Modified>
+      <Modified>2024-03-20T19:53:03.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.466</Modified>
+      <Modified>2024-03-20T19:53:03.356</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.481</Modified>
+      <Modified>2024-03-20T19:53:03.370</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.502</Modified>
+      <Modified>2024-03-20T19:53:03.391</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-03-13T14:55:37.552</Modified>
+      <Modified>2024-03-20T19:53:03.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-03-14T00:32:29.114</Modified>
+      <Modified>2024-03-20T19:53:03.055</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-03-14T00:32:29.122</Modified>
+      <Modified>2024-03-20T19:53:03.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-03-14T00:32:29.132</Modified>
+      <Modified>2024-03-20T19:53:03.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-03-14T00:32:29.149</Modified>
+      <Modified>2024-03-20T19:53:03.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-03-14T00:32:29.206</Modified>
+      <Modified>2024-03-20T19:53:03.145</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\nodata.scale-100.png">
       <PackagePath>nodata.scale-100.png</PackagePath>
@@ -291,7 +291,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="Z:\c#\maui\VideoFileRenamer\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\VideoFileRenamer.deps.json">
       <PackagePath>VideoFileRenamer.deps.json</PackagePath>
-      <Modified>2024-03-18T14:59:45.861</Modified>
+      <Modified>2024-03-22T17:06:36.432</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mbman\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.31\lib\net6.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

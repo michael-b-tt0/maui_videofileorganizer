@@ -46,17 +46,17 @@ public class VideoFile : INotifyPropertyChanged
 {
     public string VideoName { get; set; } = string.Empty;
 
-    private string videoPath = string.Empty;
+    public string videoPath = string.Empty;
 
     Random random = new Random();
 
     public VideoFile()
     {
 
-        paths_to_screenshots = new ObservableCollection<string>();
+        
     }
 
-    private ObservableCollection<string> paths_to_screenshots;
+    private ObservableCollection<string> paths_to_screenshots = new();
 
     public ObservableCollection<string> Paths_to_screenshots
     {
@@ -71,6 +71,16 @@ public class VideoFile : INotifyPropertyChanged
     public static readonly string localAppDataFolder = FileSystem.AppDataDirectory;
 
     public static readonly string temp_photo_folder = Path.Combine(localAppDataFolder, "TempImages");
+
+    public static void Checkscreenshotfolder()
+    {
+        if (!Directory.Exists(temp_photo_folder))
+        {
+
+            Directory.CreateDirectory(temp_photo_folder);
+        }
+
+    }
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -151,6 +161,29 @@ public class VideoFile : INotifyPropertyChanged
             }
 
         }
+    }
+
+    public async void GetTwoMoreVideoImages()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            double randomOffset = random.NextDouble() * mediaAnalysis.Duration.TotalSeconds;
+            TimeSpan snapshotTime = TimeSpan.FromSeconds(randomOffset);
+            string shortUuid = Guid.NewGuid().ToString("N").Substring(0, 8);
+            var tempImagePath = Path.Combine(temp_photo_folder, $"{shortUuid}.PNG");
+
+            var success = await FFMpeg.SnapshotAsync(videoPath, tempImagePath, new System.Drawing.Size(854, 480), snapshotTime);
+            if (!success)
+            {
+                throw new Exception($"Error taking screenshot {i + 1}!");
+
+            }
+            else
+                paths_to_screenshots.Add(tempImagePath);
+
+            Debug.WriteLine($"added {tempImagePath} screenshot to {this.VideoName}");
+        }
+
     }
 }
 
