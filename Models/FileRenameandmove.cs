@@ -21,8 +21,8 @@ public static class FileRenameandmove
 
             if (File.Exists(newFilePath))
             {
-                
-                return ($"Error: Destination file already exists {newFilePath}.", true);
+                progress?.Report(3);
+                return ($"Error: Destination file already exists {newFilePath}.", false);
                 // Handle the situation where the destination file already exists
             }
             else

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VideoFileRenamer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+633a84dd165387e632431e497f38e73435c48dbd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3075446c80c63348772b4a32b55a5b90bcef343d")]
 [assembly: System.Reflection.AssemblyProductAttribute("VideoFileRenamer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VideoFileRenamer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

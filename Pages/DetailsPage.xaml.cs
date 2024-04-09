@@ -93,6 +93,11 @@ public partial class DetailsPage : ContentPage
                         csv_component.IsVisible = true;
                         DisplayAlert("Title", "Moving Finished!", "OK");
                     }
+                    else if (progress == 3)
+                    {
+                        DisplayAlert("Title", "File already exists in the destination folder you should delete it", "OK");
+
+                    }
                 }) ;
 
                 // Call your function here

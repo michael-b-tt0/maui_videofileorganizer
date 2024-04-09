@@ -14,16 +14,18 @@
 
 
         <!--  Content for the top part  -->
-        <VerticalStackLayout Grid.Row="0" BackgroundColor="White"
-                             x:DataType="{x:Null}">
+        <VerticalStackLayout
+            Grid.Row="0"
+            x:DataType="{x:Null}"
+            BackgroundColor="White">
             <!--  Add your content here  -->
             <uranium:SelectableLabel
                 HorizontalOptions="Center"
-                                     Text="{Binding VideoFile.VideoName}"
+                Text="{Binding VideoFile.VideoName}"
                 VerticalOptions="CenterAndExpand" />
-            <Label
+            <uranium:SelectableLabel
                 HorizontalOptions="Center"
-                   Text="{Binding VideoFile.VideoPath}"
+                Text="{Binding VideoFile.VideoPath}"
                 VerticalOptions="CenterAndExpand" />
             <FlexLayout
                 Grid.Column="0"
@@ -44,7 +46,7 @@
                                 HeightRequest="50"
                                 Stroke="Red"
                                 StrokeShape="{RoundRectangle CornerRadius=5}">
-                                <Label Text="{Binding SelectedVideoChoice}" TextColor="Black" />
+                                <uranium:SelectableLabel Text="{Binding SelectedVideoChoice}" TextColor="Black" />
                             </Border>
                         </uranium:StatefulContentView>
 
