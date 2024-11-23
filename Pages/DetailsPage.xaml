@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:VideoFileRenamer"
     xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
     xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
-    x:DataType="local:VideoFile">
+    x:DataType="local:MainpageViewModel">
 
 
     <Grid RowDefinitions="Auto,Auto">
@@ -21,11 +21,11 @@
             <!--  Add your content here  -->
             <uranium:SelectableLabel
                 HorizontalOptions="Center"
-                Text="{Binding VideoFile.VideoName}"
+                Text="{Binding Source={RelativeSource AncestorType={x:Type local:DetailsPage}}, Path=VideoFile.VideoName}"
                 VerticalOptions="CenterAndExpand" />
             <uranium:SelectableLabel
                 HorizontalOptions="Center"
-                Text="{Binding VideoFile.VideoPath}"
+                Text="{Binding Source={RelativeSource AncestorType={x:Type local:DetailsPage}}, Path=VideoFile.VideoPath}"
                 VerticalOptions="CenterAndExpand" />
             <FlexLayout
                 Grid.Column="0"
@@ -40,13 +40,13 @@
                     WidthRequest="400">
                     <VerticalStackLayout x:DataType="local:DetailsPage">
 
-                        <uranium:StatefulContentView LongPressCommand="{Binding Triggerrenaming}">
+                        <uranium:StatefulContentView LongPressCommand="{Binding Source={RelativeSource AncestorType={x:Type local:DetailsPage}}, Path=Triggerrenaming}">
                             <Border
                                 BackgroundColor="{StaticResource Primary}"
                                 HeightRequest="50"
                                 Stroke="Red"
                                 StrokeShape="{RoundRectangle CornerRadius=5}">
-                                <uranium:SelectableLabel Text="{Binding SelectedVideoChoice}" TextColor="Black" />
+                                <uranium:SelectableLabel Text="{Binding Source={RelativeSource AncestorType={x:Type local:DetailsPage}}, Path=SelectedVideoChoice}" TextColor="Black" />
                             </Border>
                         </uranium:StatefulContentView>
 
@@ -62,7 +62,7 @@
                         Grid.Column="0"
                         x:DataType="{x:Null}"
                         AlignItems="Start"
-                        BindableLayout.ItemsSource="{Binding VideoFile.Paths_to_screenshots}"
+                        BindableLayout.ItemsSource="{Binding Source={RelativeSource AncestorType={x:Type local:DetailsPage}}, Path=VideoFile.Paths_to_screenshots}"
                         Direction="Row"
                         JustifyContent="Start"
                         Wrap="Wrap">

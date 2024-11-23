@@ -13,16 +13,23 @@
         ColumnSpacing="5"
         RowDefinitions="*, Auto"
         RowSpacing="0">
-        <CollectionView ItemsSource="{Binding VideoCollection}" SelectionMode="None">
+        <CollectionView
+            ItemsSource="{Binding VideoCollection}"
+            ItemsUpdatingScrollMode="KeepScrollOffset"
+            RemainingItemsThreshold="0"
+            RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}"
+            SelectionMode="None">
             <CollectionView.EmptyView>
-                <StackLayout Padding="100">
+                <Grid Padding="100">
                     <Image
+                        Grid.Row="0"
+                        Grid.Column="0"
                         HeightRequest="160"
                         HorizontalOptions="Center"
                         Source="nodata.png"
                         VerticalOptions="Center"
                         WidthRequest="160" />
-                </StackLayout>
+                </Grid>
             </CollectionView.EmptyView>
 
             <CollectionView.ItemTemplate>
@@ -33,29 +40,35 @@
                                 <TapGestureRecognizer />
                             </Frame.GestureRecognizers>
                             <Grid Padding="0" ColumnDefinitions="125, *">
-                                <VerticalStackLayout
+                                <Grid
                                     Grid.Column="1"
                                     Padding="10"
                                     x:DataType="local:VideoFile"
+                                    RowDefinitions="Auto,Auto,*"
+                                    RowSpacing="5"
                                     VerticalOptions="StartAndExpand">
 
-                                    <Label Style="{StaticResource LargeLabel}" Text="{Binding VideoName}">
+                                    <Label
+                                        Grid.Row="0"
+                                        Style="{StaticResource LargeLabel}"
+                                        Text="{Binding VideoName}">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="Go_to_DetailPage" />
                                         </Label.GestureRecognizers>
                                     </Label>
-                                    <Label Style="{StaticResource MediumLabel}" Text="{Binding VideoPath}" />
 
-
+                                    <Label
+                                        Grid.Row="1"
+                                        Style="{StaticResource MediumLabel}"
+                                        Text="{Binding VideoPath}" />
 
                                     <FlexLayout
-                                        Grid.Column="0"
+                                        Grid.Row="2"
                                         x:DataType="{x:Null}"
                                         BindableLayout.ItemsSource="{Binding Paths_to_screenshots}"
                                         Direction="Row"
                                         JustifyContent="SpaceEvenly"
                                         Wrap="NoWrap">
-
                                         <BindableLayout.ItemTemplate>
                                             <DataTemplate>
                                                 <Frame BackgroundColor="White">
@@ -69,15 +82,19 @@
                                             </DataTemplate>
                                         </BindableLayout.ItemTemplate>
                                     </FlexLayout>
-                                </VerticalStackLayout>
-                                <VerticalStackLayout
+                                </Grid>
+                                <Grid
                                     Grid.Column="0"
                                     Padding="10"
                                     x:DataType="local:VideoFile"
+                                    RowDefinitions="Auto,Auto"
+                                    RowSpacing="5"
                                     VerticalOptions="StartAndExpand">
-                                    <Label Text="{Binding mediaAnalysis.Duration, Converter={StaticResource TimeSpanConverter}}" VerticalOptions="CenterAndExpand" />
-
-                                    <Label>
+                                    <Label
+                                        Grid.Row="0"
+                                        Text="{Binding mediaAnalysis.Duration, Converter={StaticResource TimeSpanConverter}}"
+                                        VerticalOptions="Center" />
+                                    <Label Grid.Row="1">
                                         <Label.Text>
                                             <MultiBinding Converter="{StaticResource VideoResolutionConverter}">
                                                 <Binding Path="mediaAnalysis.VideoStreams[0].Width" />
@@ -85,7 +102,7 @@
                                             </MultiBinding>
                                         </Label.Text>
                                     </Label>
-                                </VerticalStackLayout>
+                                </Grid>
                             </Grid>
                         </Frame>
 

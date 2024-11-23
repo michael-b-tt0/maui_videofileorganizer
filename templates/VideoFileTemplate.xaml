@@ -60,10 +60,9 @@
 
 
             <Grid Grid.Column="1" ColumnDefinitions="*, Auto">
-                <StackLayout>
+                <Grid Grid.Column="0">
                     <Label Style="{StaticResource NameTextStyle}" Text="{Binding VideoName}" />
-
-                </StackLayout>
+                </Grid>
                 <Label
                     Grid.Column="1"
                     Style="{StaticResource TimeTextStyle}"

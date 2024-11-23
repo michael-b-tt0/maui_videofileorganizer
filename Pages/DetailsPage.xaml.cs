@@ -48,9 +48,9 @@ public partial class DetailsPage : ContentPage
     {
 
         InitializeComponent();
-        BindingContext = this;
+        BindingContext = mainpageViewModel;
         mainpageViewModel = ServiceHelper.GetService<MainpageViewModel>();
-        csv_component.BindingContext = mainpageViewModel;
+        
 
 
 
@@ -108,11 +108,11 @@ public partial class DetailsPage : ContentPage
                 var done = mainpageViewModel.VideoCollection.Remove(VideoFile);
                 if (done)
                 {
-                    Debug.WriteLine("video removed!");
+                    Debug.WriteLine("video removed by RenameFile function!");
                 }
 
                 await Shell.Current.GoToAsync("..");
-
+                 
             }
             
                 await DisplayAlert("Output", output, "OK");
@@ -160,9 +160,10 @@ public partial class DetailsPage : ContentPage
             {
                 //remove the current video file from the collection and go back to the mainpage
                 var done = mainpageViewModel.VideoCollection.Remove(VideoFile);
+                // check this is not causing issues with the videocollection dissepearing!
                 if (done)
                 {
-                    Debug.WriteLine("video removed!");
+                    Debug.WriteLine("video removed by DeleteVideo function!");
                 }
 
                 await Shell.Current.GoToAsync("..");

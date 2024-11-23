@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
+
 
 namespace VideoFileRenamer;
 
@@ -17,7 +19,7 @@ public class CSV_entry
     [Name("date")]
     public required DateTime Date { get; set; }
     [Ignore]
-    
+
     public required Uri? scene_image_path { get; set; }
 
 
@@ -45,8 +47,8 @@ public class CSV_entry
     public string TagsAsString => string.Join(", ", Tags);
 
     [Ignore]
-
-    public string FullFileName => $"{this.Title}__{this.Actors}_{this.Date.ToString("yyyy-MM-dd")}";
+    // add a way to make all fullnames valid as windows filepaths
+    public string FullFileName => $"{CSV_entry.SanitizeFileName(this.Title)}__{this.Actors}_{this.Date.ToString("yyyy-MM-dd")}";
 
     [Ignore]
 
@@ -54,6 +56,9 @@ public class CSV_entry
 {
     { "sexart", @"H:\P3\Sexart\" },
     { "vixen", @"G:\P\vixen\" },
+        {"blacked", @"G:\P\blacked\" },
+        {"blackedraw", @"G:\P\blackedraw\" }
+
     
     // Add more key-value pairs as needed
 };
@@ -61,4 +66,12 @@ public class CSV_entry
     [Ignore]
 
     public string FullFilePath => $"{filePathToSceneTypeMap[this.scene_type]}{FullFileName}";
+
+
+    public static string SanitizeFileName(string fileName)
+    {
+        string invalidChars = new string(Path.GetInvalidFileNameChars());
+        Regex regex = new Regex($"[{Regex.Escape(invalidChars)}]");
+        return regex.Replace(fileName, "");
+    }
 }

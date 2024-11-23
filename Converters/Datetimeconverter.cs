@@ -16,7 +16,7 @@ public class DatetimeConverter : IValueConverter
             string format = "dd.MM.yyyy";// Default format is "g" (general short time pattern)
             string formattedTimeSpan = timeSpan.ToString(format);
 
-            
+
             return  formattedTimeSpan;
         }
 
